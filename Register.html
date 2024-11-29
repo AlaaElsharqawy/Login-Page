@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <link rel="stylesheet" href="./Css/all.min.css" />
+    <link rel="stylesheet" href="./Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./Css/Register.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="content text-center w-75 mx-auto p-5">
+          <h1 class="mb-5">Smart Login System</h1>
+
+          <div>
+            <input
+              id="RegisterName"
+              type="text"
+              class="form-control my-3"
+              placeholder="Enter Your name"
+            />
+
+            <p
+              id="name-msg"
+              class="alert alert-danger text-danger w-75 mx-auto d-none"
+            >
+              must enter at least 3 characters
+            </p>
+          </div>
+
+          <div>
+            <input
+              id="RegisterEmail"
+              type="email"
+              class="form-control my-3"
+              placeholder="Enter Your Email"
+            />
+
+            <p
+              id="email-msg"
+              class="alert alert-danger text-danger w-75 mx-auto d-none"
+            >
+              must contain on @ and .
+            </p>
+          </div>
+
+          <div>
+            <input
+              id="RegisterPassword"
+              type="password"
+              class="form-control my-3"
+              placeholder="Enter Your Password"
+            />
+
+            <p
+              id="pass-msg"
+              class="alert alert-danger text-danger w-75 mx-auto d-none"
+            >
+              Ensures at least one lowercase letter , one uppercase letter , one
+              digit ,one special character and password is at least 8 characters
+              long
+            </p>
+          </div>
+
+          <p id="incorrect"></p>
+
+          <button class="btn btn-outline-info mb-4 mt-3" id="registerBtn">
+            Sign Up
+          </button>
+
+          <p>
+            Don’t have an account?
+            <a id="SignInBtn" href="index.html"> Sign in</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Register.js"></script>
+  </body>
+</html>
