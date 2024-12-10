@@ -6,13 +6,6 @@ p = document.getElementById("incorrect");
 loginButton = document.getElementById("LoginBtn");
 SignUpButton = document.getElementById("signUpBtn");
 
-var pathparts = location.pathname.split("/");
-var baseURL = "";
-for (var i = 0; i < pathparts.length - 1; i++) {
-  baseURL += "/" + pathparts[i];
-}
-console.log(baseURL);
-
 let Name = JSON.parse(localStorage.getItem("userName"));
 
 let arr = [];
@@ -37,14 +30,9 @@ function getInputs() {
         arr[i].email.toLowerCase() === loginEmail.value.toLowerCase() &&
         arr[i].password.toLowerCase() === loginPassword.value.toLowerCase()
       ) {
-        console.log("hello");
         localStorage.setItem("userName", JSON.stringify(arr[i].name));
 
-        if (baseURL == "/") {
-          location.replace("https://" + location.hostname + "/home.html");
-        } else {
-          location.replace(baseURL + "/home.html");
-        }
+        window.open("./home.html");
       } else {
         p.innerHTML = ` <span  class="text-danger my-5 ">incorrect email or password</span>`;
       }

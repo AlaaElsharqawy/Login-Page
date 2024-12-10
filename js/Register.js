@@ -50,7 +50,6 @@ function checkInputs() {
       if (checkEmail()) {
         p.innerHTML = ` <span  class="text-danger my-5 ">Aleardy  Email is Exist</span>`;
       } else {
-        console.log("1");
         arr.push(info);
         localStorage.setItem("LoginInfo", JSON.stringify(arr));
         p.innerHTML = ` <span  class="text-success my-5 ">Success</span>`;
